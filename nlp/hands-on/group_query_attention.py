@@ -32,6 +32,7 @@ class GQABroadcast(nn.Module):
 
     def forward(self, x, attention_mask= None):
         batch_size, seq_len, _ = x.size()
+        
         Q = self.q_proj(x)  # (batch_size, seq_len, hidden_dim)
         K = self.k_proj(x)  # (batch_size, seq_len, nums_kv_head * head_dim)
         V = self.v_proj(x)  # (batch_size, seq_len, nums_kv_head * head_dim)
