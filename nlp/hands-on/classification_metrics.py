@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 
 def get_metrics(y_true, y_pred):
-    n=len(y_true)
+    n = len(y_true)
     tp  = ((y_true == 1) & (y_pred == 1)).sum().item()
     tn = ((y_true == 0) & (y_pred == 0)).sum().item()
     fp = ((y_true == 0) & (y_pred == 1)).sum().item()
